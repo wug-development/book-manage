@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Book Manage",
+  "description": "管理书签",
+  "version": "0.0.1",
+  "author": "guang.wu",
+  "homepage_url": "",
+  "icons": {
+    "128": "images/icon.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "insert.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": "images/icon.png",
+    "default_title": "Book Manage",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
