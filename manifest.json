@@ -4,14 +4,23 @@
   "description": "管理书签",
   "version": "0.0.1",
   "author": "guang.wu",
-  "homepage_url": "",
+  "homepage_url": "https://github.com/wug-development/book-manage",
   "icons": {
     "128": "images/icon.png"
   },
+  // "chrome_url_overrides": {
+  //   "history": "home.html"
+  // },
+  // "app": {
+  //   "background": {
+  //     "scripts": [ "main.js" ]
+  //   }
+  // },
   "permissions": [
     "tabs",
     "activeTab",
-    "scripting"
+    "scripting",
+    "bookmarks"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -43,6 +52,6 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "content.js"
   }
 }
